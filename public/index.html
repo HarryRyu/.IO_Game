@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>General.IO Rework</title>
+        <link rel="stylesheet" href="/css/styles.css">
+    </head>
+    <body>
+        <div id="title">
+            <h1>Welcome to Generals.IO Rework</h1>
+        </div>
+        <div id="login-page">
+            <form id="login-form">
+                <label>Input your username</label>
+                <input name="username_input" placeHolder="Username" required="required" maxlength="16"><br>
+                <input type="submit" id="user-submit" value="Submit">
+            </form>
+        </div>
+        <div id = "main-page" style="display:none">
+            <h1>Welcome to Generals.IO Rework</h1>
+            <h2>Click the Start button to indicate that you are ready</h2>
+            <h2>Once everyone in the lobby is ready, the game will start</h2>
+            <form id="game-start">
+                <input type="submit" value="Start">
+            </form>
+            <div id = "parameter">
+                <p>Map Size</p>
+                <input type="range" id = range1 min="10" max="50" value="30">
+                <p class="slide-data" id=output1>30</p>
+                <p>Mountain</p>
+                <input type="range" id=range2 min="0" max="40" value="20">
+                <p class="slide-data"id=output2>20%</p>
+                <p>City</p>
+                <input type="range" id=range3 min="0" max="100" value="30">
+                <p class="slide-data" id=output3>30%</p>
+                <p>Game Speed</p>
+                <input type="range" id=range4 min="1" max="50" value="10">
+                <p class="slide-data" id=output4>1</p>
+            </div>
+        </div>
+        <div id="game-page" style="display:none">
+            <canvas id="gameCanvas"></canvas>
+        </div>
+        <div id="lobby-list" style="display:none">
+            <table id="lobby-table">
+                <tr id = table-title>
+                    <th>In Lobby: </th>
+                </tr>
+            </table>
+        </div>
+        <div id = "loading-screen" style="display:none">
+            <h1>Game Starting</h1>
+        </div>
+        <div id="leaderboard" style="display:none">
+            <table id="table">
+                <tr>
+                    <th>Player</th>
+                    <th>Units</th>
+                    <th>Territory</th>
+                </tr>
+            </table>
+        </div>
+        <div id = "game-over-page" style="display:none">
+            <h1>Game Over</h1>
+        </div>
+        <script id="user-template" type="text/html">
+            <tr>
+                <th>{{username}}</th>
+                <th><span style = "color: transparent; text-shadow: 0 0 0 yellow; position: relative; top: -1px;" class = "ready"></span></th>
+            </tr>
+        </script>
+        <script id="score-template" type="text/html">
+            <tr>
+                <th>{{username}}</th>
+                <th>{{unit}}</th>
+                <th>{{territory}}</th>
+            </tr>
+        </script>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.6.0/qs.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script type="module" src="/js/game.js"></script>
+        <script type="module" src="/js/index.js"></script>
+        <script type="module" src="/js/eventListener.js"></script>
+        <script type="module" src="/js/draw.js"></script>
+        <script type="module" src="/js/update.js"></script>
+        <script type="module" src="/js/parameters.js"></script>
+        <script type="module" src="/js/events/clickEvent.js"></script>
+        <script type="module" src="/js/events/wheelEvent.js"></script>
+        <script type="module" src="/js/events/keyEvent.js"></script>
+        <script type="module" src="/js/events/dragEvent.js"></script>
+    </body>
+</html>

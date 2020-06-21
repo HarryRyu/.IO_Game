@@ -1,0 +1,217 @@
+:root {
+    --login-page-height: 480px;
+    --login-page-width: 300px;
+    --tile-size: 30px;
+}
+html {
+    height: 100%;
+}
+body {
+    margin: 0;
+    min-height: 100%;
+    background-color: rgb(41, 41, 41);
+    overflow: hidden;
+}
+input {
+    margin: 10px;
+    font-size: 120%;
+    background-color: rgb(231, 231, 231);
+    border: 0px;
+    border-radius: 3px;
+    display: inline-block;
+    text-align: center;
+}
+input:focus {
+    background-color: white;
+    color: rgb(17, 5, 5);
+
+}
+input[type=submit]{
+    width: 80px;
+    background-color: rgb(15, 15, 15);
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    color: rgb(97, 97, 97);
+    font-weight: 600;
+    font-size: 90%;
+    margin: 2px;
+}
+input[type=submit]:hover{
+    color: rgb(170, 170, 170);
+}
+input[type=range]{
+    margin: 8px;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 80%;
+    height: 10px;
+    background: #969696;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+input[type=range]:hover{
+    opacity: 1;
+}
+label {
+    color: black;
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 120%;
+    font-weight: 750;
+
+}
+p{
+    margin: 0px;
+    font-weight: bold;
+}
+::placeholder{
+    text-align: center;
+    font-size: 90%
+}
+th{
+    text-align: left;
+}
+span{
+    color: yellow;
+}
+#title {
+    line-height: 180px;
+    text-align: center;
+    font-family: Arial, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 3px #585858;
+}
+#login-page {
+    background-color: rgb(107, 145, 180);
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(24, 24, 24);
+    position: absolute;
+    top: calc(50% - var(--login-page-height) / 2);
+    left: calc(50% - var(--login-page-width) / 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: var(--login-page-width);
+    height: var(--login-page-height);
+    text-align: center;
+    vertical-align: text-top;
+}
+
+#tile{
+    width: calc(var(--tile-size) - 2px);
+    height: calc(var(--tile-size) - 2px);
+    background-color: rgb(173, 173, 173);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    cursor: context-menu;
+    float: left;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(97, 97, 97);
+}
+
+#map{
+    width: calc(var(--tile-size) * 30);
+    height: calc(var(--tile-size) * 30);
+    margin: auto;
+}
+#main-page{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(0, 0, 0);
+}
+h1{
+    line-height: 50px;
+    text-align: center;
+    font-family: Arial, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 3px #585858;
+}
+h2{
+    font-size: 17px;
+}
+#game-start{
+    position: relative;
+    top: 10px;
+}
+#parameter{
+    position: relative;
+    top: 40px;
+    left: calc(50% - 100px);
+    width: 200px;
+    background-color: rgb(80, 80, 80);
+    margin: 0px;
+    padding: 10px;
+    border-radius: 3px;
+}
+.slide-data{
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: normal;
+}
+#loading-screen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    vertical-align: text-top;
+    line-height: 180px;
+    text-align: center;
+    font-family: Arial, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 3px #585858;
+}
+#game-over-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    text-align: center;
+    vertical-align: text-top;
+    line-height: 180px;
+    text-align: center;
+    font-family: Arial, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 3px #585858;
+}
+
+#leaderboard{
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 250px;
+    height: 400px;
+     
+    background-color: rgb(168, 168, 168);
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(97, 97, 97);
+}
+
+#lobby-list {
+    position: absolute;
+    top: calc(50% - 150px);
+    left: 20px;
+    width: 180px;
+    height: 30.4px;
+    border-radius: 4px;
+    background-color: rgb(48, 48, 48);
+    text-align: justify;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+#lobby-table {
+    margin: auto;
+}
+#table-title{
+    height: 30px;
+}
